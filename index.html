@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Crop Advisory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌿 Smart Crop Advisory</h1>
+    <p>Get crop recommendations and soil-based advice instantly</p>
+  </header>
+
+  <main>
+    <!-- --- Soil pH + Crop Advice Section --- -->
+    <section class="form-section">
+      <h2>Soil pH and Crop Advisory</h2>
+      <div class="form-container">
+        <label for="crop">Select Crop:</label>
+        <select id="crop">
+          <option value="">--Choose Crop--</option>
+          <option value="rice">Rice</option>
+          <option value="wheat">Wheat</option>
+          <option value="maize">Maize</option>
+          <option value="cotton">Cotton</option>
+        </select>
+
+        <label for="ph">Enter Soil pH:</label>
+        <input type="number" id="ph" placeholder="e.g. 6.5" step="0.1" min="3" max="10" />
+
+        <button id="getAdvice">Get Advisory</button>
+      </div>
+
+      <div class="output-container">
+        <h3>🌾 Advisory Result</h3>
+        <p id="adviceText">Fill the form and click “Get Advisory”.</p>
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- --- Soil Type + Fertilizer Crop Recommender Section --- -->
+    <section class="form-section">
+      <h2>Crop Recommendation by Soil Type</h2>
+      <div class="form-container">
+        <label for="soilType">Soil Type:</label>
+        <select id="soilType">
+          <option value="">--Choose Soil Type--</option>
+          <option value="clay">Clay</option>
+          <option value="sandy">Sandy</option>
+          <option value="loam">Loam</option>
+          <option value="black">Black Soil</option>
+          <option value="red">Red Soil</option>
+        </select>
+
+        <label for="region">Region / Climate:</label>
+        <select id="region">
+          <option value="">--Select Climate--</option>
+          <option value="tropical">Tropical</option>
+          <option value="temperate">Temperate</option>
+          <option value="dry">Dry / Arid</option>
+          <option value="humid">Humid</option>
+        </select>
+
+        <label for="fertilizer">Fertilizer Type:</label>
+        <select id="fertilizer">
+          <option value="">--Select Fertilizer--</option>
+          <option value="nitrogen">Nitrogen-rich</option>
+          <option value="phosphorus">Phosphorus-rich</option>
+          <option value="potassium">Potassium-rich</option>
+          <option value="organic">Organic Compost</option>
+        </select>
+
+        <button id="getCrops">Get Suitable Crops</button>
+      </div>
+
+      <div class="output-container">
+        <h3>🌱 Recommended Crops</h3>
+        <p id="cropResult">Fill in your details to see suitable crops.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with 💚 for farmers — Smart Crop Advisory</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
